@@ -159,7 +159,7 @@ let CompileUtil = {
         rawTokens.push((tokenValue = text.slice(lastIndex, index)));
         tokens.push(JSON.stringify(tokenValue));
       }
-      // tag token  exp.slice(0, i).trim()
+      // tag token 
       const exp = match[1].trim();
       tokens.push(`_s(${exp})`);
       rawTokens.push({ "@binding": exp });

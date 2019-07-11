@@ -10,7 +10,7 @@
     <div id="app">
       <!-- 双向数据绑定 靠的是表单 -->
       <input type="text" v-model="message.a" />
-      <div>{{ message.a }}你好</div>
+      <div>{{ message.a }} 啦啦啦</div>
       {{ message.a }}
       {{ b }}
     </div>
@@ -19,13 +19,14 @@
 <script src="observer.js"></script>
 <script src="watcher.js"></script>
 <script src="compile.js"></script>
+<script src="dep.js"></script>
 <script src="mvvm.js"></script>
 <script>
   let vm = new MVVM({
     el: "#app",
     data: {
       message: { a: "wlf" },
-      b: "MVVM"
+      b: "biubiubiu"
     }
   });
 </script>

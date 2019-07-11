@@ -27,8 +27,8 @@ class Observer {
     let dep = new Dep(); // 每个变化的数据 都会对应一个数组，这个数组是存放所有更新的操作
 
     Object.defineProperty(obj, key, {
-      enumerable: true,
-      configurable: true,
+      enumerable: true,     // 是否能在for...in循环中遍历出来或在Object.keys中列举出来
+      configurable: true,   // false，不可修改、删除目标属性或修改属性性以下特性
       get() {
         Dep.target && dep.addSub(Dep.target)
         return value;
